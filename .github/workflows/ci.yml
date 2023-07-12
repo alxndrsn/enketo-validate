@@ -23,6 +23,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           registry-url: https://registry.npmjs.org/
-      - if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+      - run: npm ci
       - run: npm test
